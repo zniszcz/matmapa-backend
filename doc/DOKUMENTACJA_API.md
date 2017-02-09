@@ -255,7 +255,9 @@ Aplikacja powinna używać kontenerów dockerowych i posiadać plik `helper.sh` 
 | Komenda                 | Działanie                              |
 |-------------------------|----------------------------------------|
 |`matmapa-backend setup`  | Pobiera i uruchamia wymagane kontenery |
+|`matmapa-backend use`    | Ustawia obecną wersję node z `.nvmrc`  |
 |`matmapa-backend install`| Instaluje zależności                   |
 |`matmapa-backend run`    | Uruchamia projekt                      |
+|`matmapa-backend sync `  | Restartuje API                         |
 
 Aplikacja powinna móc być uruchomiona w trybie developerskim (za pomocą parametru `--env=dev`). W trybie developerskim serwer akceptuje zapytania z każdej domeny(`Access-Control-Allow-Origin: *`).
