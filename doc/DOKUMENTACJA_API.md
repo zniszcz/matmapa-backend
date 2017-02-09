@@ -3,7 +3,7 @@
 Aplikacja w przyszłości ma być RESTowym serwerem umożliwiającym grupie edytorów współtworzenie grafu zależności tematów w serwisie elearningowym. Z tej aplikacji obecnie będą korzystać jedynie twórcy serwisu (1 - 5 użytkowników). Aplikacja składa się z 3 modułów:
 
 ## 1. Moduł użytkowników
-W chwili obecnej potrzebujemy jedynie autoryzacji użytkowników. Niezalogowany użytkownik nie może korzystać z aplikacji. Przetrzymujemy email użytkownika, nick, hasło oraz jego unikalny identyfikator. Wszelkie pozostałe dane są na tym etapie zbędne.
+Niezalogowany użytkownik nie może korzystać z aplikacji. Przetrzymujemy email użytkownika, nick, hasło oraz jego unikalny identyfikator.
 
 1. **Unikalny identyfikator** - *(int)*
 2. **Email** - *(String)*
