@@ -1,4 +1,4 @@
-Opis funkcjonalny
+# Opis funkcjonalny
 
 Aplikacja w przyszłości ma być RESTowym serwerem umożliwiającym grupie edytorów współtworzenie grafu zależności tematów w serwisie elearningowym. Z tej aplikacji obecnie będą korzystać jedynie twórcy serwisu (1 - 5 użytkowników). Aplikacja składa się z 3 modułów:
 
