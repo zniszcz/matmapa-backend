@@ -8,6 +8,7 @@ Niezalogowany użytkownik nie może korzystać z aplikacji. Przetrzymujemy email
 1. **Unikalny identyfikator** - *(int)*
 2. **Email** - *(String)*
 3. **Nick** - *(String)*
+4. **Hasło** - *(String)*
 
 ## 2. Moduł tematów
 Temat odzwierciedla jedno zagadnienie w kursie. Tematy mogą posiadać podtematy (conajmniej 10 poziomów zagnieżdżenia, w przyszłości możemy potrzebować więcej). Użytkownicy mogą dodawać, usuwać oraz edytować tematy. Temat posiada (pogrubione pola są obowiązkowe):
