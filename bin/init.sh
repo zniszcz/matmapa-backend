@@ -1,6 +1,6 @@
 echo "Initialising matmapa setup file"
 cd /matmapa
-nvm install
-npm install
-npm install -g pm2
-pm2 start src/app.js
+version=$(<.nvmrc)
+/home/.nvm/nvm.sh install
+"/home/.nvm/versions/node/v$version/bin/npm" install
+"/home/.nvm/versions/node/v$version/bin/node" src/app.js
