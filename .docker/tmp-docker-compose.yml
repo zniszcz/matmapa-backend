@@ -1,0 +1,21 @@
+version: '2'
+services:
+  matmapa_db:
+    image: neo4j:3.0
+    container_name: matmapa_db
+    ports:
+      - "7474:7474"
+      - "7686:7686"
+    volumes:
+      - $HOME/neo4j/data:/data
+      - $HOME/neo4j/logs:/logs
+
+  matmapa_npm:
+    image: etiv/nvm-base
+    container_name: matmapa_npm
+    ports:
+      - "80:3000"
+    volumes:
+      -  <<<project_dir>>>/src:/node-project
+    environment:
+      - NODE_VAR=0.10.28
