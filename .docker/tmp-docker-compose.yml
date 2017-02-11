@@ -10,9 +10,9 @@ services:
       - $HOME/neo4j/data:/data
       - $HOME/neo4j/logs:/logs
 
-  matmapa_npm:
+  matmapa_nvm:
     image: etiv/nvm-base
-    container_name: matmapa_npm
+    container_name: matmapa_nvm
     ports:
       - "80:3000"
     volumes:
