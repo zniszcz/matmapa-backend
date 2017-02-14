@@ -13,6 +13,10 @@ Available CONTAINERS:
 
 COMMAND:
    help      Show this message
+   setup     Runs project docker setup
+   use       Set enviroment
+   install   Install dependencies
+   sync      Restart server
 
 EOF
 }
@@ -28,7 +32,7 @@ function in_array # ( needle, haystack )
 
 function matmapa-backend # command from ${available_args} array, params
 {
-    declare -a available_args=('help');
+    declare -a available_args=('setup', 'use', 'install', 'run', 'sync');
 
     if ! in_array "$1" ${available_args[@]}; then
         _matmapa-backend_usage
@@ -39,9 +43,24 @@ function matmapa-backend # command from ${available_args} array, params
     local CURRENT_DIR="$( pwd )"
 
     case "${1}" in
-        'help')
-            printf %"s\n" "Starting docker-sync... (CTRL+C to stop)"
-            # docker-sync-stack start
+        'setup')
+            printf %"s\n" "Running matmapa-backend setup"
+            ;;
+
+        'use')
+            printf %"s\n" "Running matmapa-backend use"
+            ;;
+
+        'install')
+            printf %"s\n" "Running matmapa-backend install"
+            ;;
+
+        'run')
+            printf %"s\n" "Running matmapa-backend run"
+            ;;
+
+        'sync')
+            printf %"s\n" "Running matmapa-backend sync"
             ;;
 
         *)
