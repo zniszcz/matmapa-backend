@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+    matmapa_db:
+        image: neo4j:3.0
+        ports:
+          - "7474:7474"
+          - "7686:7686"
+        volumes:
+          - $HOME/neo4j/data:/data
+          - $HOME/neo4j/logs:/logs
