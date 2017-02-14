@@ -16,6 +16,7 @@ COMMAND:
    setup     Runs project docker setup
    use       Set enviroment
    install   Install dependencies
+   run       Runs project
    sync      Restart server
 
 EOF
@@ -32,13 +33,6 @@ function in_array # ( needle, haystack )
 
 function matmapa-backend # command from ${available_args} array, params
 {
-    declare -a available_args=('setup', 'use', 'install', 'run', 'sync');
-
-    if ! in_array "$1" ${available_args[@]}; then
-        _matmapa-backend_usage
-        return 0
-    fi
-
     # cd to dir containing .env file
     local CURRENT_DIR="$( pwd )"
 
