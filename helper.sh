@@ -22,35 +22,27 @@ COMMAND:
 EOF
 }
 
-function in_array # ( needle, haystack )
+function matmapa-backend
 {
-  local value
-  for value in "${@:2}"; do
-    [[ "$value" == "$1" ]] && return 0;
-  done
-  return 1
-}
-
-function matmapa-backend # command from ${available_args} array, params
-{
-    # cd to dir containing .env file
-    local CURRENT_DIR="$( pwd )"
-
     case "${1}" in
         'setup')
             printf %"s\n" "Running matmapa-backend setup"
+            ./bin/SETUP_CONTAINERS.sh
             ;;
 
         'use')
             printf %"s\n" "Running matmapa-backend use"
+            ./bin/SETUP_ENVIROMENT.sh
             ;;
 
         'install')
             printf %"s\n" "Running matmapa-backend install"
+            ./bin/INSTALL_DEPENDENCIES.sh
             ;;
 
         'run')
             printf %"s\n" "Running matmapa-backend run"
+            ./bin/RUN_PROJECT.sh
             ;;
 
         'sync')
@@ -62,7 +54,4 @@ function matmapa-backend # command from ${available_args} array, params
             return 0
             ;;
     esac
-
-    # go back go to previous dir
-    cd ${CURRENT_DIR}
 }

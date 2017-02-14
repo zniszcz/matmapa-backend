@@ -1,1 +1,2 @@
+cd /matmapa
 nvm install
