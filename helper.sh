@@ -17,6 +17,7 @@ COMMAND:
    install   Install dependencies
    run       Runs project
    sync      Restart server
+   node      Enter node command line
 
 EOF
 }
@@ -42,6 +43,11 @@ function matmapa-backend
         'sync')
             printf %"s\n" "Running matmapa-backend sync"
             docker exec matmapa_node sh /matmapa/bin/SYNC_PROJECT.sh
+            ;;
+
+        'node')
+            printf %"s\n" "Running node command-line"
+            docker exec -ti matmapa_node bash
             ;;
 
         *)
