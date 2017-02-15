@@ -41,6 +41,7 @@ function matmapa-backend
 
         'sync')
             printf %"s\n" "Running matmapa-backend sync"
+            docker exec matmapa_node sh /matmapa/bin/SYNC_PROJECT.sh
             ;;
 
         *)

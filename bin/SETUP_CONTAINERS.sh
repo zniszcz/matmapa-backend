@@ -2,7 +2,7 @@ SAMPLE="docker-compose.sample.yml"
 COMPOSE="docker-compose.yml"
 PROJECT_DIR=`pwd`
 
-cd docker
+cd .docker
 
 cp $SAMPLE $COMPOSE
 
