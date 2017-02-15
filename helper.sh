@@ -14,7 +14,6 @@ Available CONTAINERS:
 COMMAND:
    help      Show this message
    setup     Runs project docker setup
-   use       Set enviroment
    install   Install dependencies
    run       Runs project
    sync      Restart server
@@ -30,19 +29,14 @@ function matmapa-backend
             ./bin/SETUP_CONTAINERS.sh
             ;;
 
-        'use')
-            printf %"s\n" "Running matmapa-backend use"
-            ./bin/SETUP_ENVIROMENT.sh
-            ;;
-
         'install')
             printf %"s\n" "Running matmapa-backend install"
-            ./bin/INSTALL_DEPENDENCIES.sh
+            docker exec matmapa_node sh /matmapa/bin/INSTALL_DEPENDENCIES.sh
             ;;
 
         'run')
             printf %"s\n" "Running matmapa-backend run"
-            ./bin/RUN_PROJECT.sh
+            docker exec matmapa_node sh /matmapa/bin/RUN_PROJECT.sh
             ;;
 
         'sync')
