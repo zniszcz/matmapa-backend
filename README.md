@@ -1,12 +1,36 @@
-# Installation
+
+# Instalation
 
 ## Prerequirements
-At first, make sure that you have `docker` and `docker-compose` installed.
+Make sure you have `docker` and `docker-compose` installed.
 
-## Run
-To run project:
+### 1. Add helper to your bashrc
+``` sh
+$ source /absolute/path/to/project/helper.sh
+```
 
-``` bash
-$ ./build_all.sh
-$ ./run_docker.sh
+### 2. Run docker setup
+``` sh
+$ matmapa-backend setup
+```
+
+### 3. Install dependentcies
+``` sh
+$ matmapa-backend install
+```
+
+### 4. Run project
+``` sh
+$ matmapa-backend run
+```
+Your project should be avalaible at port `80`
+
+To sync your project type:
+``` sh
+$ matmapa-backend sync
+```
+
+To access node CL type:
+``` sh
+$ matmapa-backend node
 ```
