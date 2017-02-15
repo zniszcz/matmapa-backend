@@ -1,0 +1,19 @@
+version: '2'
+services:
+    neo4j:
+        image: neo4j:3.0
+        container_name: matmapa_db
+        volumes:
+          - $HOME/neo4j/data:/data
+          - $HOME/neo4j/logs:/logs
+
+    node:
+        build: .
+        container_name: matmapa_node
+        tty: true
+        ports:
+            - "80:3000"
+        volumes:
+            - <<<project_dir>>>:/matmapa
+        links:
+            - neo4j:neo4j
