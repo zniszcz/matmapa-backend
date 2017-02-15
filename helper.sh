@@ -8,7 +8,7 @@ usage: matmapa-backend COMMAND PARAMS
 Matmapa Backend Docker Compose helper
 
 Available CONTAINERS:
-- matmapa_nvm
+- matmapa_node
 - matmapa_db
 
 COMMAND:
