@@ -37,6 +37,9 @@ function matmapa-backend
 
         'run')
             printf %"s\n" "Running matmapa-backend run"
+            cd .docker
+            docker-compose up
+            cd ..
             docker exec matmapa_node sh /matmapa/bin/RUN_PROJECT.sh
             ;;
 

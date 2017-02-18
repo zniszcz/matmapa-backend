@@ -2,10 +2,14 @@ version: '2'
 services:
     neo4j:
         image: neo4j:3.0
-        container_name: matmapa_db
+        container_name: matmapa_neo4j
         volumes:
           - $HOME/neo4j/data:/data
           - $HOME/neo4j/logs:/logs
+
+    mongodb:
+        image: mongo:latest
+        container_name: matmapa_mongodb
 
     node:
         build: .
@@ -17,3 +21,4 @@ services:
             - <<<project_dir>>>:/matmapa
         links:
             - neo4j:neo4j
+            - mongodb:mongodb
