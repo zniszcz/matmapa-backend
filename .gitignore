@@ -1,2 +1,2 @@
 .docker/docker-compose.yml
-src/node_modules
+node_modules
