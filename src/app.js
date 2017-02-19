@@ -4,13 +4,12 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 
-const jwt = require('jsonwebtoken');
 const config = require('./config');
 const User = require('./models/user');
 
 const port = process.env.PORT || 3000;
+
 mongoose.connect(config.database);
-app.set('superSecret', config.secret);
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
