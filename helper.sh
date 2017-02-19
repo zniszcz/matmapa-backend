@@ -16,7 +16,7 @@ COMMAND:
    setup            Runs project docker setup
    run-containers   Run docker containers
    install          Install dependencies
-   run              Runs project
+   run              Runs node app
    sync             Restart server
    node             Enter node command line
 
