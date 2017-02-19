@@ -1,3 +1,3 @@
 module.exports = (req, res) => {
-  res.json({ messages: 'Zautoryzowany node' });
+  res.json({ messages: 'Sample authorised node' });
 };
