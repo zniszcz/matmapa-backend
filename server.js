@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 
-const config = require('./config');
+const config = require('./utils/config');
 const User = require('./models/user');
 
 const port = process.env.PORT || 3000;

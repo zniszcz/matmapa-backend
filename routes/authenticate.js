@@ -1,7 +1,7 @@
 const User = require('../models/user');
 const jwt = require('jsonwebtoken');
 const routes = require('express').Router();
-const config = require('../config');
+const config = require('../utils/config');
 
 module.exports = (req, res) => {
   User.findOne({

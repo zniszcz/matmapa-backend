@@ -1,5 +1,5 @@
 const routes = require('express').Router();
-const protect = require('../protectRoute');
+const protect = require('../utils/protectRoute');
 
 const authenticate = require('./authenticate');
 const showNode = require('./node/index');
