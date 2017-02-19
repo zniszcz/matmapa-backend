@@ -45,7 +45,7 @@ function matmapa-backend
 
         'run')
             printf %"s\n" "Running matmapa-backend run"
-            docker exec matmapa_node sh /matmapa/bin/RUN_PROJECT.sh $2
+            docker exec matmapa_node sh /matmapa/bin/RUN_PROJECT.sh ${@:2}
             ;;
 
         'sync')
