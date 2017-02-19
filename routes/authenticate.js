@@ -4,6 +4,13 @@ const routes = require('express').Router();
 const config = require('../utils/config');
 
 module.exports = (req, res) => {
+  if (!req.body.name || !req.body.password) {
+    return res.json({
+      success: false,
+      message: `Authentication failed. You don't passed nick or password.`
+    });
+  }
+
   User.findOne({
     name: req.body.name
   }, (err, user) => {
@@ -11,7 +18,7 @@ module.exports = (req, res) => {
 
     if (!user) {
       res.json({ success: false, message: 'Authentication failed. User not found'});
-    } else if (user) {
+    } else {
       if (user.password != req.body.password) {
         res.json({ success: false, message: 'Authentication failed. Wrong password.'});
       } else {
