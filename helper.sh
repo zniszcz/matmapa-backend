@@ -12,12 +12,13 @@ Available CONTAINERS:
 - matmapa_db
 
 COMMAND:
-   help      Show this message
-   setup     Runs project docker setup
-   install   Install dependencies
-   run       Runs project
-   sync      Restart server
-   node      Enter node command line
+   help             Show this message
+   setup            Runs project docker setup
+   run-containers   Run docker containers
+   install          Install dependencies
+   run              Runs node app
+   sync             Restart server
+   node             Enter node command line
 
 EOF
 }
@@ -30,6 +31,13 @@ function matmapa-backend
             ./bin/SETUP_CONTAINERS.sh
             ;;
 
+        'run-containers')
+            printf %"s\n" "Running matmapa-backend containers"
+            cd .docker
+            docker-compose up
+            cd ..
+            ;;
+
         'install')
             printf %"s\n" "Running matmapa-backend install"
             docker exec matmapa_node sh /matmapa/bin/INSTALL_DEPENDENCIES.sh
@@ -37,7 +45,7 @@ function matmapa-backend
 
         'run')
             printf %"s\n" "Running matmapa-backend run"
-            docker exec matmapa_node sh /matmapa/bin/RUN_PROJECT.sh
+            docker exec matmapa_node sh /matmapa/bin/RUN_PROJECT.sh ${@:2}
             ;;
 
         'sync')

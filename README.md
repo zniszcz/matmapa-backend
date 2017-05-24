@@ -25,6 +25,11 @@ $ matmapa-backend run
 ```
 Your project should be avalaible at port `80`
 
+To run in production mode type:
+``` sh
+$ matmapa-backend run --env=production
+```
+
 To sync your project type:
 ``` sh
 $ matmapa-backend sync
