@@ -28,7 +28,7 @@ module.exports = (req, res) => {
         .update(req.body.password)
         .digest('hex');
 
-      if (req.body.password != userPassword) {
+      if (user.password != userPassword) {
         res.json({
           success: false,
           message: 'Authentication failed. Wrong password.'
@@ -41,7 +41,7 @@ module.exports = (req, res) => {
         res.json({
           success: true,
           message: 'Enjoy your token',
-          token: token
+          token,
         });
       }
     }
