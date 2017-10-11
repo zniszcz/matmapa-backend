@@ -19,6 +19,7 @@ COMMAND:
    run              Runs node app
    sync             Restart server
    node             Enter node command line
+   sequelize        Sequelize CLI
 
 EOF
 }
@@ -56,6 +57,11 @@ function matmapa-backend
         'node')
             printf %"s\n" "Running node command-line"
             docker exec -ti matmapa_node bash
+            ;;
+
+        'sequelize')
+            printf %"s\n" "Running sequelize"
+            docker exec matmapa_node sh /matmapa/bin/SEQUELIZE_CLI.sh ${@:2}
             ;;
 
         *)
